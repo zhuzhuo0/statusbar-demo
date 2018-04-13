@@ -5,19 +5,25 @@ import { NoheaderPage } from './../noheader/noheader';
 import { EnterPage } from './../enter/enter';
 import { InnerPage } from './../inner/inner';
 
+/**
+ * Generated class for the OthertabPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-othertab',
+  templateUrl: 'othertab.html',
 })
-export class AboutPage {
+export class OthertabPage {
 
   constructor(
     public navCtrl: NavController,
-    public statusBar: StatusBar,
     public platform: Platform,
+    public statusBar: StatusBar,
     public app: App
   ) {
-
   }
 
   ionViewWillEnter() {

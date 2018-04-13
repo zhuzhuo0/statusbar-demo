@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,67 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+// 设置padding-top为状态栏高度
+.platform-android {
+  .ion-page {
+    ion-header {
+      padding-top: $cordova-md-statusbar-padding;
+    }
+  }
+}
+
+%super-bar {
+  //   .scroll-content {
+  //     margin-top: 0 !important;
+  //   }
+  ion-header,
+  .toolbar-background {
+    background-color: color($colors, primary);
+  } //   .opaque {
+  //     background-color: color($colors, primary) !important;
+  //     &:after {
+  //       height: 5px !important;
+  //     }
+  //     .toolbar-background {
+  //       background-color: color($colors, primary);
+  //     }
+  //   }
+}
+
+%change-bar {
+  .scroll-content {
+    margin-top: 0 !important;
+  }
+  ion-header,
+  .toolbar-background {
+    background-color: initial !important;
+    transition: background-color 800ms ease;
+    &:after {
+      height: 0 !important;
+    }
+  }
+  .opaque {
+    background-color: color($colors, primary) !important;
+    &:after {
+      height: 5px !important;
+    }
+    .toolbar-background {
+      background-color: color($colors, primary);
+    }
+  }
+}
+
+.platform-android {
+  page-home,
+  page-enter,
+  page-noheader,
+  page-contact,
+  page-about,
+  page-inner,
+  page-othertab {
+    @extend %super-bar;
+  }
+  page-home{
+    @extend %change-bar;
+  }
+}

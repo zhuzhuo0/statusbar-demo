@@ -1,17 +1,98 @@
-<ion-header>
-  <ion-navbar>
+<ion-header [class.opaque]="showSearchbar">
+  <ion-navbar [hidden]="!showSearchbar">
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content (ionScroll)="onScroll($event)">
+  <ion-list>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <button ion-button (tap)="enterPage()">normal</button>
+  <button ion-button (tap)="innerPage()">inner</button>
+  <button ion-button (tap)="noheaderPage()">noheader</button>
+    <ion-item>
+      change
+    </ion-item>
+
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+    <ion-item>
+      change
+    </ion-item>
+
+    <ion-item>
+      change
+    </ion-item>
+  </ion-list>
+  
 </ion-content>
